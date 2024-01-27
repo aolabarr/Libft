@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aolabarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/12 19:48:21 by aolabarr          #+#    #+#             */
+/*   Updated: 2024/01/12 20:43:36 by aolabarr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
+{
+	int		count;
+	t_list	*node;
+
+	count = 0;
+	node = lst;
+	if (lst == NULL)
+		return (count);
+	while ((node -> next) != NULL)
+	{
+		count++;
+		node = node -> next;
+	}
+	count++;
+	return (count);
+}
